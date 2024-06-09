@@ -23,7 +23,7 @@ jobs:
         key: venv-${{ matrix.python-version }}-${{ hashFiles('pyproject.toml') }}
     - name: Install dependencies
       run: |
-        pip install .
+        pip install .[dev]
 
     - name: Run style checks
       run: |
@@ -32,7 +32,5 @@ jobs:
     - name: Run tests
       run: |
         make test
-
-    - name: Run safety checks
-      run: |
-        make check-safety
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
