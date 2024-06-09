@@ -5,7 +5,6 @@ from github_dash.github_stats import update_data
 
 
 class TestUpdateData(unittest.TestCase):
-
     @patch(
         "github_dash.github_stats.get_github_commits"
     )  # Mocking the get_github_commits function

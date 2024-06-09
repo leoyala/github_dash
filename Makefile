@@ -43,7 +43,7 @@ mypy:
 
 .PHONY: check-safety
 check-safety:
-	safety check --full-report
+	safety scan
 	bandit -ll --recursive github_dash tests
 
 .PHONY: lint

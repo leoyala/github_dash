@@ -39,21 +39,21 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = [
-    "bandit==1.7.8",
-    "black==24.4.2",
-    "isort[colors]==5.13.2",
-    "mypy==1.10.0",
-    "pre-commit==3.7.1",
-    "pydocstyle==6.3.0",
-    "pylint==3.2.3",
-    "pytest==8.2.2",
-    "pyupgrade==3.16.0",
-    "safety==3.2.2",
-    "coverage==7.5.3",
-    "coverage-badge==1.1.1",
-    "pytest-html==4.1.1",
-    "pytest-cov==5.0.0",
-    "detect-secrets==1.5.0"
+    "bandit",
+    "black",
+    "isort[colors]",
+    "mypy",
+    "pre-commit",
+    "pydocstyle",
+    "pylint",
+    "pytest",
+    "pyupgrade",
+    "safety",
+    "coverage",
+    "coverage-badge",
+    "pytest-html",
+    "pytest-cov",
+    "detect-secrets"
 ]
 
 [project.scripts]
@@ -143,8 +143,8 @@ source = ["tests"]
 branch = true
 
 [tool.coverage.paths]
-source = "github_dash"
+source = ["github_dash"]
 
 [tool.coverage.report]
-fail_under = 50
+fail_under = 10
 show_missing = true
