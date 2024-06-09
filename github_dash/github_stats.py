@@ -6,7 +6,7 @@ from filelock import FileLock
 from github import Github
 
 data_lock = FileLock("data.lock")
-ACCESS_TOKEN = os.environ["GITHUB_ACCESS_TOKEN"]
+ACCESS_TOKEN = os.environ["GITHUB_TOKEN"]
 
 
 def get_commit_stats(commit):
