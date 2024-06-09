@@ -32,7 +32,9 @@ jobs:
     - name: Run tests
       run: |
         make test
-
-    - name: Run safety checks
-      run: |
-        make check-safety
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+    - name: safety
+      uses: safety/safety@2.3.4
+      with:
+        api-key: ${{secrets.SAFETY_API_KEY}}
