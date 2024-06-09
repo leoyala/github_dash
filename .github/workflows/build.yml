@@ -33,8 +33,11 @@ jobs:
       run: |
         make test
       env: 
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
-    - name: safety
-      uses: safety/safety@2.3.4
-      with:
-        api-key: ${{secrets.SAFETY_API_KEY}}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  
+  safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: safety/safety@2.3.4
+        with:
+          api-key: ${{secrets.SAFETY_API_KEY}}
